@@ -30,7 +30,13 @@ export class ReactiveFormLoginComponent implements OnInit {
   }
 
   search() {
-    console.log(this.form.value);
-    console.log("worked")
+    Object.keys(this.form.controls).forEach((key) => {
+      this.form.get(key).markAsTouched();
+    });
+    let formControl = this.form
+
+    if (formControl.valid){
+      console.log("worked")
+    }
   }
 }
