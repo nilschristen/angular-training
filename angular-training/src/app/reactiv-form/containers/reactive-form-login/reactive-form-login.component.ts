@@ -15,8 +15,8 @@ export class ReactiveFormLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-        username: new FormControl("", [Validators.required,]),
-        password: new FormControl("", [Validators.required,]),
+        username: new FormControl('', [Validators.required,]),
+        password: new FormControl('', [Validators.required,]),
         }
     )
   }
@@ -36,7 +36,7 @@ export class ReactiveFormLoginComponent implements OnInit {
     let formControl = this.form
 
     if (formControl.valid){
-      console.log("worked")
+      console.log('worked')
     }
   }
 }

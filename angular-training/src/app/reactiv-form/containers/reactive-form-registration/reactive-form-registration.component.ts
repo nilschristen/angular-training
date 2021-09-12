@@ -12,4 +12,7 @@ export class ReactiveFormRegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit() {
+    console.log('worked')
+  }
 }

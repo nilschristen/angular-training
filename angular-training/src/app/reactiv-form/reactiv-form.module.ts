@@ -12,7 +12,8 @@ import {ReactiveFormsModule} from "@angular/forms";
         ReactiveFormRegistrationComponent
     ],
     exports: [
-        ReactiveFormLoginComponent
+        ReactiveFormLoginComponent,
+        ReactiveFormRegistrationComponent
     ],
     imports: [
         CommonModule,

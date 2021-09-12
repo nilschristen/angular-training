@@ -1,1 +1,33 @@
-<p>reactive-form-registration works!</p>
+<form (submit)="submit()">
+  <div class="container-fluid">
+    <h1>Registrtion</h1>
+    <div class="row p-1">
+      <div class="col-3">
+        <input id="firstname" type="text">
+        <label for="firstname">Firstname</label>
+      </div>
+      <div class="col-2"></div>
+      <div class="col-3">
+        <input id="lastname" type="text">
+        <label for="lastname">Last Name</label>
+      </div>
+    </div>
+    <div class="row p-3">
+      <input id="birthday" type="date">
+      <label for="birthday">Birthday</label>
+    </div>
+    <div class="row p-3">
+      <input id="username" type="text">
+      <label for="username">Username</label>
+    </div>
+    <div class="row p-3">
+      <input id="password" type="text">
+      <label for="password">Password</label>
+    </div>
+    <div class="row p-3">
+      <input id="repeatpassword" type="text">
+      <label for="repeatpassword">Repeat Password</label>
+    </div>
+    <button type="submit">Registrate</button>
+  </div>
+</form>
