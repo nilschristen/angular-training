@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
@@ -8,23 +8,29 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class ReactiveFormLoginComponent implements OnInit {
 
-  form!: FormGroup;
-  username!: string;
-  password!: string;
+  form: FormGroup;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.username = "";
-    this.password = "";
     this.form = new FormGroup({
-      username : new FormControl(this.username, [Validators.required, Validators.minLength(1)]),
-      password : new FormControl(this.password, [Validators.required, Validators.minLength(8)]),
-      }
+        username: new FormControl("", [Validators.required,]),
+        password: new FormControl("", [Validators.required,]),
+        }
     )
   }
 
+  get username() {
+    return this.form.get('username');
+  }
+
+  get password() {
+    return this.form.get('password');
+  }
+
   search() {
+    console.log(this.form.value);
     console.log("worked")
   }
 }
