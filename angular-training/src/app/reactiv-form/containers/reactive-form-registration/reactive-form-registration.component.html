@@ -1,6 +1,6 @@
 <form (submit)="submit()">
   <div class="container-fluid">
-    <h1>Registrtion</h1>
+    <h1 class="h1">Registrtion</h1>
     <div class="row p-1">
       <div class="col-3">
         <input id="firstname" type="text">
@@ -21,13 +21,17 @@
       <label for="username">Username</label>
     </div>
     <div class="row p-3">
-      <input id="password" type="text">
+      <input id="email" type="email">
+      <label for="email">E-Mail</label>
+    </div>
+    <div class="row p-3">
+      <input id="password" type="password">
       <label for="password">Password</label>
     </div>
     <div class="row p-3">
-      <input id="repeatpassword" type="text">
+      <input id="repeatpassword" type="password">
       <label for="repeatpassword">Repeat Password</label>
     </div>
-    <button type="submit">Registrate</button>
+    <button class="btn btn-primary" type="submit">Registrate</button>
   </div>
 </form>
