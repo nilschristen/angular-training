@@ -9,6 +9,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class ReactiveFormLoginComponent implements OnInit {
 
   form: FormGroup;
+  //username: string;
+  //password: string;
 
   constructor() {
   }
@@ -17,7 +19,7 @@ export class ReactiveFormLoginComponent implements OnInit {
     this.form = new FormGroup({
         username: new FormControl('', [Validators.required,]),
         password: new FormControl('', [Validators.required,]),
-        }
+      }
     )
   }
 
@@ -35,7 +37,7 @@ export class ReactiveFormLoginComponent implements OnInit {
     });
     let formControl = this.form
 
-    if (formControl.valid){
+    if (formControl.valid) {
       console.log('worked')
     }
   }

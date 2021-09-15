@@ -1,37 +1,96 @@
-<form (submit)="submit()">
+<form [formGroup]="form" (submit)="submit()">
   <div class="container-fluid">
-    <h1 class="h1">Registrtion</h1>
-    <div class="row p-1">
+    <h1 class="h1 pb-3">Registrtion</h1>
+    <div class="row p-1 col col-5 pb-3">
       <div class="col-3">
-        <input id="firstname" type="text">
+        <input id="firstname"
+               formControlName="firstname"
+               type="text">
         <label for="firstname">Firstname</label>
+        <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"
+             class="alert alert-danger">
+          <div *ngIf="firstname.errors?.required">
+            required!
+          </div>
+        </div>
       </div>
-      <div class="col-2"></div>
+
+      <div class="col-2" id="placeholder"></div>
+
       <div class="col-3">
-        <input id="lastname" type="text">
-        <label for="lastname">Last Name</label>
+        <input id="lastname"
+               formControlName="lastname"
+               type="text">
+        <label for="Lastname">Lastname</label>
+        <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"
+             class="alert alert-danger">
+          <div *ngIf="lastname.errors?.required">
+            required!
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row p-3">
-      <input id="birthday" type="date">
+    <div class="row p-3 col-5">
+      <input id="birthday"
+             formControlName="birthday"
+             type="date">
       <label for="birthday">Birthday</label>
+      <div *ngIf="birthday.invalid && (birthday.dirty || birthday.touched)"
+           class="alert alert-danger">
+        <div *ngIf="lastname.errors?.required">
+          required!
+        </div>
+      </div>
     </div>
-    <div class="row p-3">
-      <input id="username" type="text">
+    <div class="row p-3 col-5">
+      <input id="username"
+             formControlName="username"
+             type="text">
       <label for="username">Username</label>
+      <div *ngIf="birthday.invalid && (birthday.dirty || birthday.touched)"
+           class="alert alert-danger">
+        <div *ngIf="lastname.errors?.required">
+          required!
+        </div>
+      </div>
     </div>
-    <div class="row p-3">
-      <input id="email" type="email">
+    <div class="row p-3 col-5">
+      <input id="email"
+             formControlName="email"
+             type="email">
       <label for="email">E-Mail</label>
+      <div *ngIf="birthday.invalid && (birthday.dirty || birthday.touched)"
+           class="alert alert-danger">
+        <div *ngIf="birthday.errors?.required">
+         required!
+        </div>
+      </div>
     </div>
-    <div class="row p-3">
-      <input id="password" type="password">
+    <div class="row p-3 col-5">
+      <input id="password"
+             formControlName="password"
+             type="password">
       <label for="password">Password</label>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)"
+           class="alert alert-danger">
+        <div *ngIf="password.errors?.required">
+          required!
+        </div>
+      </div>
     </div>
-    <div class="row p-3">
-      <input id="repeatpassword" type="password">
+    <div class="row p-3 col-5">
+      <input id="repeatpassword"
+             formControlName="repeatpassword"
+             type="password">
       <label for="repeatpassword">Repeat Password</label>
+      <div *ngIf="repeatpassword.invalid && (repeatpassword.dirty || repeatpassword.touched)"
+           class="alert alert-danger">
+        <div *ngIf="repeatpassword.errors?.required">
+          required!
+        </div>
+      </div>
     </div>
-    <button class="btn btn-primary" type="submit">Registrate</button>
+    <button class="btn btn-primary"
+            type="submit">Registrate</button>
   </div>
 </form>
