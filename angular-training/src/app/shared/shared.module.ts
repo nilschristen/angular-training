@@ -10,6 +10,10 @@ import { ValidationErrorComponent } from './components/validation-error/validati
     ValidationErrorsComponent,
     ValidationErrorComponent
   ],
+  exports: [
+    ValidationErrorComponent,
+    ValidationErrorsComponent
+  ],
   imports: [
     CommonModule
   ]

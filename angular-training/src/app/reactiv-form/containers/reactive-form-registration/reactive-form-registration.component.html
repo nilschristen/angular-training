@@ -7,12 +7,7 @@
                formControlName="firstname"
                type="text">
         <label for="firstname">Firstname</label>
-        <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"
-             class="alert alert-danger">
-          <div *ngIf="firstname.errors?.required">
-            required!
-          </div>
-        </div>
+        <validation-errors [control]="form.controls['firstname']" [errorKeys]="errorKeys"></validation-errors>
       </div>
 
       <div class="col-2" id="placeholder"></div>
@@ -22,73 +17,43 @@
                formControlName="lastname"
                type="text">
         <label for="Lastname">Lastname</label>
-        <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"
-             class="alert alert-danger">
-          <div *ngIf="lastname.errors?.required">
-            required!
-          </div>
-        </div>
+        <validation-errors [control]="form.controls['lastname']" [errorKeys]="errorKeys"></validation-errors>
       </div>
     </div>
     <div class="row p-3 col-5">
       <input id="birthday"
              formControlName="birthday"
-             type="date">
+             type="date" >
       <label for="birthday">Birthday</label>
-      <div *ngIf="birthday.invalid && (birthday.dirty || birthday.touched)"
-           class="alert alert-danger">
-        <div *ngIf="lastname.errors?.required">
-          required!
-        </div>
-      </div>
+      <validation-errors [control]="form.controls['birthday']" [errorKeys]="errorKeys"></validation-errors>
     </div>
     <div class="row p-3 col-5">
       <input id="username"
              formControlName="username"
              type="text">
       <label for="username">Username</label>
-      <div *ngIf="birthday.invalid && (birthday.dirty || birthday.touched)"
-           class="alert alert-danger">
-        <div *ngIf="lastname.errors?.required">
-          required!
-        </div>
-      </div>
+      <validation-errors [control]="form.controls['username']" [errorKeys]="errorKeys"></validation-errors>
     </div>
     <div class="row p-3 col-5">
       <input id="email"
              formControlName="email"
              type="email">
       <label for="email">E-Mail</label>
-      <div *ngIf="birthday.invalid && (birthday.dirty || birthday.touched)"
-           class="alert alert-danger">
-        <div *ngIf="birthday.errors?.required">
-         required!
-        </div>
-      </div>
+      <validation-errors [control]="form.controls['email']" [errorKeys]="errorKeys"></validation-errors>
     </div>
     <div class="row p-3 col-5">
       <input id="password"
              formControlName="password"
              type="password">
       <label for="password">Password</label>
-      <div *ngIf="password.invalid && (password.dirty || password.touched)"
-           class="alert alert-danger">
-        <div *ngIf="password.errors?.required">
-          required!
-        </div>
-      </div>
+      <validation-errors [control]="form.controls['password']" [errorKeys]="errorKeys"></validation-errors>
     </div>
     <div class="row p-3 col-5">
       <input id="repeatpassword"
              formControlName="repeatpassword"
              type="password">
       <label for="repeatpassword">Repeat Password</label>
-      <div *ngIf="repeatpassword.invalid && (repeatpassword.dirty || repeatpassword.touched)"
-           class="alert alert-danger">
-        <div *ngIf="repeatpassword.errors?.required">
-          required!
-        </div>
-      </div>
+      <validation-errors [control]="form.controls['repeatpassword']" [errorKeys]="errorKeys"></validation-errors>
     </div>
     <button class="btn btn-primary"
             type="submit">Registrate</button>

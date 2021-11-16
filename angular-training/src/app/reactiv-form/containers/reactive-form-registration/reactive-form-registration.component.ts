@@ -8,13 +8,15 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class ReactiveFormRegistrationComponent implements OnInit {
   form: FormGroup;
-  //firstname: string;
-  //lastname: string;
-  //email: string;
-  //birthday: Date;
-  //username: string;
-  //password: string;
-  //repeatpassword: string;
+  firstname: string;
+  lastname: string;
+  email: string;
+  birthday: Date;
+  username: string;
+  password: string;
+  repeatpassword: string;
+
+  errorKeys = [{key: 'required', label: 'required'}];
 
   constructor() {
   }
@@ -30,35 +32,6 @@ export class ReactiveFormRegistrationComponent implements OnInit {
       repeatpassword: new FormControl('', [Validators.required,])
       }
     )
-  }
-
-
-  get firstname(){
-    return this.form.get('firstname');
-  }
-
-  get lastname(){
-    return this.form.get('lastname');
-  }
-
-  get email(){
-    return this.form.get('email');
-  }
-
-  get birthday() {
-    return this.form.get('birthday');
-  }
-
-  get username() {
-    return this.form.get('username');
-  }
-
-  get password() {
-    return this.form.get('password');
-  }
-
-  get repeatpassword() {
-    return this.form.get('repeatpassword');
   }
 
   submit() {

@@ -1,10 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AbstractControl} from "@angular/forms";
-import {of, Subscription} from "rxjs";
+import {Subscription} from "rxjs";
 import {ValidationErrorKey} from "../../models/validation-error-key";
 
 @Component({
-  selector: 'app-validation-errors',
+  selector: 'validation-errors',
   templateUrl: './validation-errors.component.html',
   styleUrls: ['./validation-errors.component.scss']
 })

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormLoginComponent } from './containers/reactive-form-login/reactive-form-login.component';
 import { ReactiveFormRegistrationComponent } from './containers/reactive-form-registration/reactive-form-registration.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {SharedModule} from "../shared/shared.module";
+import {NgbDatepickerModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 
@@ -17,7 +19,9 @@ import {ReactiveFormsModule} from "@angular/forms";
     ],
     imports: [
         CommonModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        SharedModule,
+        NgbDatepickerModule
     ]
 })
 export class ReactivFormModule { }
