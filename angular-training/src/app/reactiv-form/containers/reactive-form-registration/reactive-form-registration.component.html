@@ -1,13 +1,14 @@
-<form [formGroup]="form" (submit)="submit()">
-  <div class="container-fluid">
-    <h1 class="h1 pb-3">Registrtion</h1>
-    <div class="row p-1 col col-5 pb-3">
+<div class="container-fluid">
+  <h1 class="h1 pb-2">Registrtion</h1>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row p-1 col-5">
       <div class="col-3">
         <input id="firstname"
                formControlName="firstname"
                type="text">
         <label for="firstname">Firstname</label>
-        <validation-errors [control]="form.controls['firstname']" [errorKeys]="errorKeys"></validation-errors>
+        <validation-errors [control]="form.controls['firstname']"
+                           [errorKeys]="errorKeys"></validation-errors>
       </div>
 
       <div class="col-2" id="placeholder"></div>
@@ -17,13 +18,14 @@
                formControlName="lastname"
                type="text">
         <label for="Lastname">Lastname</label>
-        <validation-errors [control]="form.controls['lastname']" [errorKeys]="errorKeys"></validation-errors>
+        <validation-errors [control]="form.controls['lastname']"
+                           [errorKeys]="errorKeys"></validation-errors>
       </div>
     </div>
     <div class="row p-3 col-5">
       <input id="birthday"
              formControlName="birthday"
-             type="date" >
+             type="date">
       <label for="birthday">Birthday</label>
       <validation-errors [control]="form.controls['birthday']" [errorKeys]="errorKeys"></validation-errors>
     </div>
@@ -56,6 +58,8 @@
       <validation-errors [control]="form.controls['repeatpassword']" [errorKeys]="errorKeys"></validation-errors>
     </div>
     <button class="btn btn-primary"
-            type="submit">Registrate</button>
-  </div>
-</form>
+            type="submit">Registrate
+    </button>
+  </form>
+</div>
+

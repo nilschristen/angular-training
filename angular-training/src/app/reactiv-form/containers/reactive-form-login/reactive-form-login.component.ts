@@ -9,9 +9,6 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class ReactiveFormLoginComponent implements OnInit {
 
   form: FormGroup;
-  //username: string;
-  //password: string;
-
   constructor() {
   }
 
