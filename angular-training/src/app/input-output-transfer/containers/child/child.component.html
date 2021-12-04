@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <h1 class="h1 pb-2">BMI Calculator</h1>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row p-1 col-5">
+      <div class="col-3">
+        <input id="height" type="number" class="input-group" formControlName="height">
+
+        <label for="height">Height</label>
+        <validation-errors [control]="form.controls['height']"
+                           [errorKeys]="errorKeys"></validation-errors>
+      </div>
+
+      <div class="col-2" id="placeholder"></div>
+
+      <div class="col-3">
+
+        <input
+          id="weight"
+          type="number"
+          formControlName="weight"
+          class="input-group">
+
+        <label for="weight">Weight</label>
+        <validation-errors [control]="form.controls['weight']"
+                           [errorKeys]="errorKeys"></validation-errors>
+      </div>
+    </div>
+
+    <button class="btn btn-primary"
+            type="submit">Calculate
+    </button>
+  </form>
+</div>
+<ng-container *ngIf="prentFlag">
+  <app-parent [bmiModel]="bmiModel"></app-parent>
+</ng-container>

@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import {ReactivFormModule} from "./reactiv-form/reactiv-form.module";
 import {SharedModule} from "./shared/shared.module";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {InputOutputTransferModule} from "./input-output-transfer/input-output-transfer.module";
+import {NgcCookieConsentModule} from 'ngx-cookieconsent';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     ReactivFormModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    InputOutputTransferModule,
+    NgcCookieConsentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
