@@ -5,7 +5,7 @@
       <div class="col-3">
         <input id="height" type="number" class="input-group" formControlName="height">
 
-        <label for="height">Height</label>
+        <label for="height">Height (in cm)</label>
         <validation-errors [control]="form.controls['height']"
                            [errorKeys]="errorKeys"></validation-errors>
       </div>
@@ -20,7 +20,7 @@
           formControlName="weight"
           class="input-group">
 
-        <label for="weight">Weight</label>
+        <label for="weight">Weight (in Kg)</label>
         <validation-errors [control]="form.controls['weight']"
                            [errorKeys]="errorKeys"></validation-errors>
       </div>
