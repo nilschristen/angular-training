@@ -7,6 +7,10 @@ import {SharedModule} from "./shared/shared.module";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {InputOutputTransferModule} from "./input-output-transfer/input-output-transfer.module";
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {StepperModule} from "./stepper/stepper.module";
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -57,7 +61,10 @@ const cookieConfig: NgcCookieConsentConfig = {
     SharedModule,
     NgbModule,
     InputOutputTransferModule,
-    NgcCookieConsentModule.forRoot(cookieConfig)
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    BrowserAnimationsModule,
+    StepperModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
