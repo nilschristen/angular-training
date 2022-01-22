@@ -17,18 +17,19 @@ import {
 export class AppComponent {
   title = 'angular-training';
 
-  private popupOpenSubscription: Subscription;
-  private popupCloseSubscription: Subscription;
-  private initializeSubscription: Subscription;
-  private statusChangeSubscription: Subscription;
-  private revokeChoiceSubscription: Subscription;
-  private noCookieLawSubscription: Subscription;
+  // private popupOpenSubscription: Subscription;
+  // private popupCloseSubscription: Subscription;
+  // private initializeSubscription: Subscription;
+  // private statusChangeSubscription: Subscription;
+  // private revokeChoiceSubscription: Subscription;
+  // private noCookieLawSubscription: Subscription;
 
-  constructor(private ccService: NgcCookieConsentService){}
+ // constructor(private ccService: NgcCookieConsentService){}
+  constructor(){}
 
   ngOnInit() {
     // subscribe to cookieconsent observables to react to main events
-    this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
+    /*this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
       () => {
         // you can use this.ccService.getConfig() to do stuff...
         console.log("open")
@@ -60,18 +61,18 @@ export class AppComponent {
       (event: NgcNoCookieLawEvent) => {
         // you can use this.ccService.getConfig() to do stuff...
       });
+
+     */
   }
 
   ngOnDestroy() {
     // unsubscribe to cookieconsent observables to prevent memory leaks
-    this.popupOpenSubscription.unsubscribe();
+   /* this.popupOpenSubscription.unsubscribe();
     this.popupCloseSubscription.unsubscribe();
     this.initializeSubscription.unsubscribe();
     this.statusChangeSubscription.unsubscribe();
     this.revokeChoiceSubscription.unsubscribe();
     this.noCookieLawSubscription.unsubscribe();
+    */
   }
-
-
-
 }
