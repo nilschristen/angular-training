@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {StepperModule} from "./stepper/stepper.module";
 import {MatStepperModule} from '@angular/material/stepper';
 import {VideoPlayerModule} from "./video-player/video-player.module";
+import {HomeModule} from "./home/home.module";
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {VideoPlayerModule} from "./video-player/video-player.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HomeModule,
     ReactivFormModule,
     SharedModule,
     NgbModule,
