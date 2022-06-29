@@ -4,6 +4,7 @@ import {ValidationErrorsComponent} from './components/validation-errors/validati
 import {ValidationErrorComponent} from './components/validation-error/validation-error.component';
 import {NavigationComponent} from './components/navigation/navigation/navigation.component';
 import {RouterModule} from "@angular/router";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {RouterModule} from "@angular/router";
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
   ]
 })
 export class SharedModule {

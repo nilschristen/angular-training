@@ -1,12 +1,86 @@
-<div class="page">
-  <nav class="page_menu page_custom-settings menu">
-    <ul class="menu_list r-list">
-      <li class="menu_group"><a routerLink="ui/" class="menu_link r-link text-underlined">Home</a></li>
-      <li class="menu_group"><a routerLink="ui/login" class="menu_link r-link text-underlined">Reactive Forms</a></li>
-      <li class="menu_group"><a routerLink="ui/input" class="menu_link r-link text-underlined">Input Output</a></li>
-      <li class="menu_group"><a routerLink="ui/stepper" class="menu_link r-link text-underlined">Stepper</a></li>
-      <li class="menu_group"><a routerLink="ui/video" class="menu_link r-link text-underlined">Video</a></li>
-    </ul>
-  </nav>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a routerLink="ui/home" class="navbar-brand">Angular<b>Training</b></a>
+  <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+    <div class="navbar-nav">
+      <a routerLink="ui/" class="nav-item nav-link">Home</a>
+      <div class="nav-item dropdown">
+        <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Reactive Form</a>
+        <div class="dropdown-menu">
+          <a routerLink="ui/input" class="nav-item nav-link">Input</a>
+          <a routerLink="ui/output" class="nav-item nav-link">Output</a>
+        </div>
+      </div>
+      <a routerLink="ui/stepper" class="nav-item nav-link">Stepper</a>
+      <a routerLink="ui/video" class="nav-item nav-link">Video</a>
+    </div>
+    <div class="navbar-nav ml-auto action-buttons">
+      <div class="nav-item dropdown">
+        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Login</a>
+        <div class="dropdown-menu action-form">
+          <form [formGroup]="loginForm" (submit)="submitLogin()">
+            <p class="hint-text">Login to your account</p>
+            <input class="form-control"
+                   formControlName="loginUsername"
+                   type="text"
+                   id="loginUsername">
+            <label for="loginUsername">Username</label>
+            <validation-errors [control]="loginForm.controls['loginUsername']"
+                               [errorKeys]="errorKeys">
+            </validation-errors>
+            <input class="form-control"
+                   formControlName="loginPassword"
+                   type="password"
+                   id="loginPassword">
+            <label for="loginPassword">Password</label>
+            <validation-errors [control]="loginForm.controls['loginPassword']"
+                               [errorKeys]="errorKeys">
+            </validation-errors>
+            <input type="submit" class="btn btn-primary btn-block" value="Login">
+            <div class="text-center mt-2">
+              <a href="#">Forgot Your password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle sign-up-btn">Sign up</a>
+        <div class="dropdown-menu action-form">
+          <form [formGroup]="registrationForm" (ngSubmit)="submitRegistration()">
+            <p class="hint-text">Fill in this form to create your account!</p>
+            <input id="registrationUsername"
+                   class="form-control"
+                   formControlName="registrationUsername"
+                   type="text">
+            <label for="registrationUsername">Username</label>
+            <validation-errors [control]="registrationForm.controls['registrationUsername']"
+                               [errorKeys]="errorKeys"></validation-errors>
+            <input id="email"
+                   class="form-control"
+                   formControlName="email"
+                   type="email">
+            <label for="email">E-Mail</label>
+            <validation-errors [control]="registrationForm.controls['email']"
+                               [errorKeys]="errorKeys"></validation-errors>
+            <input id="registrationPassword"
+                   class="form-control"
+                   formControlName="registrationPassword"
+                   type="password">
+            <label for="registrationPassword">Password</label>
+            <validation-errors [control]="registrationForm.controls['registrationPassword']"
+                               [errorKeys]="errorKeys"></validation-errors>
+            <input id="repeatpassword"
+                   class="form-control"
+                   formControlName="repeatpassword"
+                   type="password">
+            <label for="repeatpassword">Repeat Password</label>
+            <validation-errors [control]="registrationForm.controls['repeatpassword']"
+                               [errorKeys]="errorKeys">
 
+            </validation-errors>
+            <input type="submit" class="btn btn-primary btn-block" value="Registration">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -2,40 +2,35 @@
   <h1 class="h1 pb-2">BMI Calculator</h1>
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="row p-1 col-5">
-      <div class="col-3">
-        <input id="height" type="number" class="input-group" formControlName="height">
-
-        <label for="height">Height (in cm)</label>
-        <validation-errors [control]="form.controls['height']"
-                           [errorKeys]="errorKeys"></validation-errors>
-      </div>
-
-      <div class="col-2" id="placeholder"></div>
-
       <div class="col-12">
         <div class="form-group">
-          <input id="floting-label" class="form-control form-control-lg">
-          <label for="floting-label">Test</label>
+          <input id="height"
+                 type="number"
+                 formControlName="height"
+                 class="form-control form-control-lg">
+          <label for="height">Height (in cm)</label>
         </div>
       </div>
+      <validation-errors [control]="form.controls['height']" [errorKeys]="errorKeys"></validation-errors>
 
-      <div class="col-3">
-
-        <input
-          id="weight"
-          type="number"
-          formControlName="weight"
-          class="input-group">
-
-        <label for="weight">Weight (in Kg)</label>
-        <validation-errors [control]="form.controls['weight']"
-                           [errorKeys]="errorKeys"></validation-errors>
+      <div class="col-12 pt-3">
+        <div class="form-group">
+          <input id="weight"
+                 type="number"
+                 formControlName="weight"
+                 class="form-control form-control-lg">
+          <label for="weight">Weight (in kg)</label>
+        </div>
       </div>
-    </div>
+      <validation-errors [control]="form.controls['weight']" [errorKeys]="errorKeys"></validation-errors>
 
-    <button class="btn btn-primary"
-            type="submit">Calculate
-    </button>
+      <div class="pt-3">
+        <button class="btn btn-primary"
+                type="submit">Calculate
+        </button>
+      </div>
+
+    </div>
   </form>
 </div>
 <ng-container *ngIf="prentFlag">
