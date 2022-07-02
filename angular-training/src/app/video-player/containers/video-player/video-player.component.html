@@ -1,22 +1,13 @@
 <div id="instructions">
-  <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px" controls preload="none"
-         poster='http://video-js.zencoder.com/oceans-clip.jpg'
+  <video id="my_video_1" class="embed-responsive embed-responsive-4by3" controls preload="none"
          data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
     <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
     <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
   </video>
-  <button (click)="playPause()">Play/Pause</button>
-  <button (click)="makeBig()">Big</button>
-  <button (click)="makeSmall()">Small</button>
-  <button (click)="makeNormal()">Normal</button>
-  <button (click)="restart();">Restart</button>
-  <button (click)="skip(-10)">Rewind</button>
-  <button (click)="skip(10)">Fastforward</button>
-</div>
-
-<div class="video">
-  <video controls (click)="toggleVideo($event)" #videoPlayer>
-    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
-    Browser not supported
-  </video>
+  <div class="container-fluid">
+    <button (click)="playPause()" class="btn btn-dark">Play/Pause</button>
+    <button (click)="restart();" class="btn btn-outline-dark">Restart</button>
+    <button (click)="skip(-10)" class="btn btn-outline-dark">Rewind</button>
+    <button (click)="skip(10)" class="btn btn-outline-dark">Fastforward</button>
+  </div>
 </div>

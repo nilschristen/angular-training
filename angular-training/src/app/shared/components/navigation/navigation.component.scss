@@ -10,14 +10,6 @@
   border-bottom: 1px solid #dfe3e8;
   border-radius: 0;
 }
-.nav-link img {
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  margin: -8px 0;
-  float: left;
-  margin-right: 10px;
-}
 .navbar .navbar-brand {
   padding-left: 0;
   font-size: 20px;
@@ -35,22 +27,6 @@
 }
 .search-box {
   position: relative;
-}
-.search-box input {
-  padding-right: 35px;
-  border-color: #dfe3e8;
-  border-radius: 4px !important;
-  box-shadow: none
-}
-.search-box .input-group-text {
-  min-width: 35px;
-  border: none;
-  background: transparent;
-  position: absolute;
-  right: 0;
-  z-index: 9;
-  padding: 7px;
-  height: 100%;
 }
 .navbar .sign-up-btn {
   min-width: 110px;
@@ -110,18 +86,7 @@
   width: 47%;
   text-decoration: none;
 }
-.navbar .social-btn .facebook-btn {
-  background: #507cc0;
-}
-.navbar .social-btn .facebook-btn:hover {
-  background: #4676bd;
-}
-.navbar .social-btn .twitter-btn {
-  background: #64ccf1;
-}
-.navbar .social-btn .twitter-btn:hover {
-  background: #4ec7ef;
-}
+
 .navbar .social-btn .btn i {
   margin-right: 5px;
   font-size: 16px;
