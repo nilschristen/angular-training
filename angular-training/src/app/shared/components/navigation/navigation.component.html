@@ -18,12 +18,12 @@
         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Login</a>
         <div class="dropdown-menu action-form">
           <form [formGroup]="loginForm" (submit)="submitLogin()">
-            <p class="hint-text">Login to your account</p>
+            <p class="hint-text text-black">Login to your account</p>
             <input class="form-control"
                    formControlName="loginUsername"
                    type="text"
                    id="loginUsername">
-            <label for="loginUsername">Username</label>
+            <label class="text-black" for="loginUsername">Username</label>
             <validation-errors [control]="loginForm.controls['loginUsername']"
                                [errorKeys]="errorKeys">
             </validation-errors>
@@ -31,7 +31,7 @@
                    formControlName="loginPassword"
                    type="password"
                    id="loginPassword">
-            <label for="loginPassword">Password</label>
+            <label class="text-black" for="loginPassword">Password</label>
             <validation-errors [control]="loginForm.controls['loginPassword']"
                                [errorKeys]="errorKeys">
             </validation-errors>
@@ -46,33 +46,33 @@
         <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle sign-up-btn">Sign up</a>
         <div class="dropdown-menu action-form">
           <form [formGroup]="registrationForm" (ngSubmit)="submitRegistration()">
-            <p class="hint-text">Fill in this form to create your account!</p>
+            <p class="hint-text text-black">Fill in this form to create your account!</p>
             <input id="registrationUsername"
                    class="form-control"
                    formControlName="registrationUsername"
                    type="text">
-            <label for="registrationUsername">Username</label>
+            <label class="text-black" for="registrationUsername">Username</label>
             <validation-errors [control]="registrationForm.controls['registrationUsername']"
                                [errorKeys]="errorKeys"></validation-errors>
             <input id="email"
                    class="form-control"
                    formControlName="email"
                    type="email">
-            <label for="email">E-Mail</label>
+            <label class="text-black" for="email">E-Mail</label>
             <validation-errors [control]="registrationForm.controls['email']"
                                [errorKeys]="errorKeys"></validation-errors>
             <input id="registrationPassword"
                    class="form-control"
                    formControlName="registrationPassword"
                    type="password">
-            <label for="registrationPassword">Password</label>
+            <label class="text-black" for="registrationPassword">Password</label>
             <validation-errors [control]="registrationForm.controls['registrationPassword']"
                                [errorKeys]="errorKeys"></validation-errors>
             <input id="repeatpassword"
                    class="form-control"
                    formControlName="repeatpassword"
                    type="password">
-            <label for="repeatpassword">Repeat Password</label>
+            <label class="text-black" for="repeatpassword">Repeat Password</label>
             <validation-errors [control]="registrationForm.controls['repeatpassword']"
                                [errorKeys]="errorKeys">
             </validation-errors>
