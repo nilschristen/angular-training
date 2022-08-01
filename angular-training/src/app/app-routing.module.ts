@@ -9,6 +9,7 @@ import {ReactiveFormLoginComponent} from "./reactiv-form/containers/reactive-for
 import {ParentComponent} from "./input-output-transfer/containers/parent/parent.component";
 import {StepperComponent} from "./stepper/containers/stepper/stepper.component";
 import {VideoPlayerComponent} from "./video-player/containers/video-player/video-player.component";
+import {NgIfForExampleComponent} from "./ng-container-class/components/ng-if-for-example/ng-if-for-example.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'ui/home', pathMatch: 'full'},
@@ -23,6 +24,7 @@ const routes: Routes = [
       {path: 'registration', component: ReactiveFormRegistrationComponent},
       {path: 'stepper', component: StepperComponent},
       {path: 'video', component: VideoPlayerComponent},
+      {path: 'ngif-ngfor', component: NgIfForExampleComponent},
     ]
   }
 ];

@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <h1 class="h1">Ng-Container Styling Tool ohne Anzeige </h1>
+  <p>Kurz und knapp was es genau ist:</p>
+  <button type="checkbox" class="btn" (click)="changeInterest()">Immer noch Interessiert?</button>
+  <ng-container *ngIf="interest">
+    <h2>Erstes Interesse und Infos</h2>
+    <p>Das War die erste Direkttive welche Sie ausgelöst haben</p>
+    <button class="btn" (click)="changeSecondInterest()">Weiteres Beispiel:
+    </button>
+  </ng-container>
+  <ng-container *ngIf="secondInterest">
+    <h2>Weitere Möglichkeiten:</h2>
+    <p>Es gibt natürlich noch deutlich mehr zu sehen, so kann mittels einer weiteren sehr wichtigen Direktive Tabellen
+      <br>
+      gefüllt werden und so viele Daten ersichtlich dargestellt werden</p>
+    <button class="btn" (click)="changeThirdInterest()">Möchten Sie dazue auch ein Beispiel sehen</button>
+  </ng-container>
+  <ng-container *ngIf="thirdInterest">
+    <h2>NG For Beispiel:</h2>
+    <p>Hier sollte der Text stehen zu der Tabelle</p>
+    <table class="table table-responsive">
+      <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Mass</th>
+      </tr>
+      <tr *ngFor="let people of starwarsPeople">
+        <td>{{people.name}}</td>
+        <td>{{people.height}}</td>
+        <td>{{people.mass}}</td>
+      </tr>
+    </table>
+  </ng-container>
+</div>

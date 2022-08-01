@@ -11,6 +11,8 @@ import {StepperModule} from "./stepper/stepper.module";
 import {MatStepperModule} from '@angular/material/stepper';
 import {VideoPlayerModule} from "./video-player/video-player.module";
 import {HomeModule} from "./home/home.module";
+import {NgContainerClassModule} from "./ng-container-class/ng-container-class.module";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import {HomeModule} from "./home/home.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     HomeModule,
     ReactivFormModule,
     SharedModule,
@@ -28,9 +31,10 @@ import {HomeModule} from "./home/home.module";
     BrowserAnimationsModule,
     StepperModule,
     MatStepperModule,
-    VideoPlayerModule
+    VideoPlayerModule,
+    NgContainerClassModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
