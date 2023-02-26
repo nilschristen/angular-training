@@ -9,7 +9,8 @@ import {ReactiveFormLoginComponent} from "./reactiv-form/containers/reactive-for
 import {ParentComponent} from "./input-output-transfer/containers/parent/parent.component";
 import {StepperComponent} from "./stepper/containers/stepper/stepper.component";
 import {VideoPlayerComponent} from "./video-player/containers/video-player/video-player.component";
-import {NgIfForExampleComponent} from "./ng-container-class/components/ng-if-for-example/ng-if-for-example.component";
+import {NgIfForExampleComponent} from "./directive/components/ng-if-for-example/ng-if-for-example.component";
+import {TodoComponent} from "./todo/components/todo/todo.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'ui/home', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
       {path: 'stepper', component: StepperComponent},
       {path: 'video', component: VideoPlayerComponent},
       {path: 'ngif-ngfor', component: NgIfForExampleComponent},
+      {path: 'todo', component: TodoComponent},
     ]
   }
 ];

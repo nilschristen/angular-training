@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgIfForService} from "../../services/ng-if-for.service";
-import {StarwarsPeople} from "../../models/starwars-people.interface";
+import {DirectiveService} from "../../services/directive.service";
 import {People} from "../../models/people.interface";
 
 @Component({
@@ -12,22 +11,18 @@ export class NgIfForExampleComponent implements OnInit {
   interest = false;
   secondInterest = false;
   thirdInterest = false;
-  starwarsPeople: People[];
+  peopleList: People[];
 
-
-  constructor(private ngIfForService: NgIfForService) {
+  constructor(private directiveService: DirectiveService) {
   }
 
   ngOnInit(): void {
-    this.ngIfForService.getStarwarsCharacters().subscribe((peoples: People[]) => {
-      this.starwarsPeople = peoples;
-      console.log(peoples);
+    this.directiveService.getStarwarsCharacters().subscribe((peoples: People[]) => {
+      this.peopleList = peoples;
     })
   }
 
-  // Input output sind nicht reactive form, somit müsste man reactive form Login-Registration als reactive form hinterlegen
   // Texte schreiben
-
 
   changeInterest() {
     this.interest = !this.interest;

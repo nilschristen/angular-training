@@ -1,0 +1,45 @@
+<div class="container">
+  <h1 class="display-4 mb-4">Todo-App</h1>
+  <div class="d-flex align-items-center mb-2">
+    <h2 class="mr-2 mt-3">Order by: </h2>
+    <select class="form-control w-auto" id="todoPriority"  (select)="sortTodoList()" [(ngModel)]="orderBy">
+      <option value="DATE">Date</option>
+      <option value="PRIORITY">Priority</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary btn-custom-size position-absolute bottom-0 end-0 mb-4 me-4"
+          (click)="open({size:'lg'})">+
+  </button>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col" *ngFor="let todo of sortTodoList()">
+      <div class="card h-auto shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center ">
+            <h2 class="card-title h1">{{ todo.name }}</h2>
+            <div class="checkbox-wrapper-19">
+              <input type="checkbox" id="cbtest-19-{{todo.id}}" [checked]="todo.completed"
+                     (click)="setCompleted(todo)"/>
+              <label for="cbtest-19-{{todo.id}}" class="check-box"></label>
+            </div>
+          </div>
+          <h4 class="card-subtitle mb-2 text-muted">{{ todo.description }}</h4>
+          <p class="card-text text-black-50"><b>To Date: </b>{{ todo.date }}</p>
+          <div class="d-flex">
+            <p class="card-text text-black-50"><b>Priority:</b></p>
+            <p class="ml-2"
+               [ngClass]=" {'text-danger': todo.priority === 'HIGH',
+               'text-warning': todo.priority === 'MEDIUM',
+               'text-success': todo.priority === 'LOW'}">
+              {{ todo.priority }}
+            </p>
+          </div>
+        </div>
+        <div class="card-footer bg-white d-flex justify-content-end align-items-center">
+          <button (click)="open({size:'lg'},todo.id)" class="btn btn-sm btn-outline-secondary me-2">Edit</button>
+          <button (click)="deleteTodo(todo.id)" class="btn btn-sm btn-secondary">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

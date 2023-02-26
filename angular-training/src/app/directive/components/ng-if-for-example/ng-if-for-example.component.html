@@ -1,0 +1,40 @@
+<div class="container">
+  <h1 class="display-4">*ngIf und *ngFor</h1>
+  <p class="lead mb-4">Kurz und knapp was es genau ist:</p>
+
+  <button class="btn btn-primary" (click)="changeInterest()">Immer noch interessiert?</button>
+
+  <ng-container *ngIf="interest">
+    <h2 class="h5 my-3">Erstes Interesse und Infos</h2>
+    <p class="mb-3">Das war die erste Direktive, die Sie ausgelöst haben.</p>
+    <button class="btn btn-primary mb-3" (click)="changeSecondInterest()">Weiteres Beispiel</button>
+  </ng-container>
+
+  <ng-container *ngIf="secondInterest" >
+    <h2 class="h5 my-3">Weitere Möglichkeiten</h2>
+    <p class="mb-3">Es gibt natürlich noch deutlich mehr zu sehen. Zum Beispiel können mittels einer weiteren sehr wichtigen Direktive Tabellen gefüllt werden, um so viele Daten übersichtlich darzustellen.</p>
+    <button class="btn btn-primary mb-3" (click)="changeThirdInterest()">Möchten Sie dazu auch ein Beispiel sehen?</button>
+  </ng-container>
+
+  <ng-container *ngIf="thirdInterest">
+    <h2 class="h5 my-3">*ngFor Beispiel</h2>
+    <p class="mb-3">Hier sollte der Text stehen zu der Tabelle.</p>
+
+    <table class="table table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Mass</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let people of peopleList">
+        <td>{{ people.name }}</td>
+        <td>{{ people.height }} cm</td>
+        <td>{{ people.mass }} kg</td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>

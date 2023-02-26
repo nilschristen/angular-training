@@ -1,6 +1,6 @@
 import {People} from "./people.interface";
 
-export interface StarwarsPeople {
+export interface Starwars {
   count: number;
   next: string;
   previous: string;

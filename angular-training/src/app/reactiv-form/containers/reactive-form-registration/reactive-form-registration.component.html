@@ -5,6 +5,7 @@
       <div class="col-3">
         <input id="firstname"
                formControlName="firstname"
+               class="input-group form-control"
                type="text">
         <label for="firstname">Firstname</label>
         <validation-errors [control]="form.controls['firstname']"
@@ -16,6 +17,7 @@
       <div class="col-3">
         <input id="lastname"
                formControlName="lastname"
+               class="input-group form-control"
                type="text">
         <label for="Lastname">Lastname</label>
         <validation-errors [control]="form.controls['lastname']"
@@ -25,6 +27,7 @@
     <div class="row p-3 col-5">
       <input id="birthday"
              formControlName="birthday"
+             class="input-group form-control"
              type="date">
       <label for="birthday">Birthday</label>
       <validation-errors [control]="form.controls['birthday']" [errorKeys]="errorKeys"></validation-errors>
@@ -32,6 +35,7 @@
     <div class="row p-3 col-5">
       <input id="username"
              formControlName="username"
+             class="input-group form-control"
              type="text">
       <label for="username">Username</label>
       <validation-errors [control]="form.controls['username']" [errorKeys]="errorKeys"></validation-errors>
@@ -39,6 +43,7 @@
     <div class="row p-3 col-5">
       <input id="email"
              formControlName="email"
+             class="input-group form-control"
              type="email">
       <label for="email">E-Mail</label>
       <validation-errors [control]="form.controls['email']" [errorKeys]="errorKeys"></validation-errors>
@@ -46,6 +51,7 @@
     <div class="row p-3 col-5">
       <input id="password"
              formControlName="password"
+             class="input-group form-control"
              type="password">
       <label for="password">Password</label>
       <validation-errors [control]="form.controls['password']" [errorKeys]="errorKeys"></validation-errors>
@@ -53,6 +59,7 @@
     <div class="row p-3 col-5">
       <input id="repeatpassword"
              formControlName="repeatpassword"
+             class="input-group form-control"
              type="password">
       <label for="repeatpassword">Repeat Password</label>
       <validation-errors [control]="form.controls['repeatpassword']" [errorKeys]="errorKeys"></validation-errors>

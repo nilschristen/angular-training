@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {StarwarsPeople} from "../models/starwars-people.interface";
-import {map, take} from "rxjs/operators";
+import {Starwars} from "../models/starwars.interface";
+import {map} from "rxjs/operators";
 import {People} from "../models/people.interface";
 
 @Injectable({
   providedIn: 'root'
 })
-export class NgIfForService {
+export class DirectiveService {
 
   BASE_URI = `https://swapi.dev/api/`
 
@@ -16,7 +16,7 @@ export class NgIfForService {
   }
 
   getStarwarsCharacters(): Observable<People[]> {
-    return this.http.get<StarwarsPeople>(`${this.BASE_URI}people`).pipe(
-      map((starwarspeople) => starwarspeople.results));
+    return this.http.get<Starwars>(`${this.BASE_URI}people`).pipe(
+      map((starwars: Starwars) => starwars.results));
   }
 }

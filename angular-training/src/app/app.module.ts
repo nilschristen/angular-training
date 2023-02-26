@@ -11,8 +11,10 @@ import {StepperModule} from "./stepper/stepper.module";
 import {MatStepperModule} from '@angular/material/stepper';
 import {VideoPlayerModule} from "./video-player/video-player.module";
 import {HomeModule} from "./home/home.module";
-import {NgContainerClassModule} from "./ng-container-class/ng-container-class.module";
-import {HttpClientModule} from "@angular/common/http";
+import {DirectiveModule} from "./directive/directive.module";
+import {HttpClientModule, HttpHeaders} from "@angular/common/http";
+import {TodoModule} from "./todo/todo.module";
+
 
 
 @NgModule({
@@ -32,9 +34,11 @@ import {HttpClientModule} from "@angular/common/http";
     StepperModule,
     MatStepperModule,
     VideoPlayerModule,
-    NgContainerClassModule
+    DirectiveModule,
+    TodoModule
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
+
 }
