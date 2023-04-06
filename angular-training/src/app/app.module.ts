@@ -12,9 +12,9 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {VideoPlayerModule} from "./video-player/video-player.module";
 import {HomeModule} from "./home/home.module";
 import {DirectiveModule} from "./directive/directive.module";
-import {HttpClientModule, HttpHeaders} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
 import {TodoModule} from "./todo/todo.module";
-
+import {ToastrModule} from 'ngx-toastr';
 
 
 @NgModule({
@@ -31,6 +31,12 @@ import {TodoModule} from "./todo/todo.module";
     NgbModule,
     InputOutputTransferModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      extendedTimeOut: 0,
+      closeButton: true,
+      preventDuplicates: false,
+    }),
     StepperModule,
     MatStepperModule,
     VideoPlayerModule,
